@@ -5,21 +5,21 @@
 class Cronnext < Formula
   desc "cronnext is a tool to show next triggers for cron expression."
   homepage "https://github.com/winebarrel/cronparse"
-  version "1.5.1"
+  version "1.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.1/cronnext_1.5.1_darwin_amd64.tar.gz"
-      sha256 "fb4927e8c817bebff3c39cd4d3d0d19f848e84d81a7ef7eb88594065b39fadb3"
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_darwin_amd64.tar.gz"
+      sha256 "7da6aad65842be3583b60fdae4d9d9e94a7bdde6eac871299aa0e85f4a11eabc"
 
       def install
         bin.install 'cronnext'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.1/cronnext_1.5.1_darwin_arm64.tar.gz"
-      sha256 "61b4950c3e1d5f2e18059a9dfe6596ae528192e91a0a44a7be099642064c61e0"
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_darwin_arm64.tar.gz"
+      sha256 "d72410336c478d0af9dd75df44bedd16dee855351bc1ba55f633f19b6a2d578c"
 
       def install
         bin.install 'cronnext'
@@ -28,17 +28,17 @@ class Cronnext < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.1/cronnext_1.5.1_linux_amd64.tar.gz"
-      sha256 "b2bfae313130ff4ea03e6ee5116de4929303fbd4bf0c08d89301b3ed6da1a388"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_linux_arm64.tar.gz"
+      sha256 "0b343f77b5fae8356b8447e31d73104e79a2d00ee73a2bd2eff3402c52369363"
 
       def install
         bin.install 'cronnext'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.1/cronnext_1.5.1_linux_arm64.tar.gz"
-      sha256 "7aea5b8a6a458a25edb722551f201cb4703d6492c3716363e8665783f3b6eb02"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_linux_amd64.tar.gz"
+      sha256 "c552e3fc3af32fbf615f4711bbb3478b835e3d5b99fc7fed948bda934435a406"
 
       def install
         bin.install 'cronnext'
