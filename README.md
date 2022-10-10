@@ -1,3 +1,3 @@
 # homebrew-cronnext
 
-Homebrew tap for [cronnext](https://github.com/winebarrel/cronparse#cronplan).
+Homebrew tap for [cronplan](https://github.com/winebarrel/cronparse#cronplan).
