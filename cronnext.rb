@@ -5,21 +5,21 @@
 class Cronnext < Formula
   desc "cronnext is a tool to show next triggers for cron expression."
   homepage "https://github.com/winebarrel/cronparse"
-  version "1.5.2"
+  version "1.5.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_darwin_amd64.tar.gz"
-      sha256 "7da6aad65842be3583b60fdae4d9d9e94a7bdde6eac871299aa0e85f4a11eabc"
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.3/cronnext_1.5.3_darwin_amd64.tar.gz"
+      sha256 "528fffcfb49eaf852991c37f307b2c7a0aa5ae296d8852bd4672e534ee380928"
 
       def install
         bin.install 'cronnext'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_darwin_arm64.tar.gz"
-      sha256 "d72410336c478d0af9dd75df44bedd16dee855351bc1ba55f633f19b6a2d578c"
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.3/cronnext_1.5.3_darwin_arm64.tar.gz"
+      sha256 "b6f24b81d5cf2a727131ded8bd7c2ba616da4fd70fb8a5d5f280987056972d37"
 
       def install
         bin.install 'cronnext'
@@ -29,16 +29,16 @@ class Cronnext < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_linux_arm64.tar.gz"
-      sha256 "0b343f77b5fae8356b8447e31d73104e79a2d00ee73a2bd2eff3402c52369363"
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.3/cronnext_1.5.3_linux_arm64.tar.gz"
+      sha256 "6747f710ac9e08ef48185aa06757c58d65e6e4ef47e7eb60ecb44b0ba4291bf9"
 
       def install
         bin.install 'cronnext'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.2/cronnext_1.5.2_linux_amd64.tar.gz"
-      sha256 "c552e3fc3af32fbf615f4711bbb3478b835e3d5b99fc7fed948bda934435a406"
+      url "https://github.com/winebarrel/cronparse/releases/download/v1.5.3/cronnext_1.5.3_linux_amd64.tar.gz"
+      sha256 "e7124fdce01bbbfb73eecc7f9eaa420cb30d60981d7499e6456243468949367d"
 
       def install
         bin.install 'cronnext'
