@@ -1,3 +1,3 @@
 # homebrew-cronplan
 
-Homebrew tap for [cronplan](https://github.com/winebarrel/cronplan).
+Homebrew tap for [cronplan CLI](https://github.com/winebarrel/cronplan#cronplan-cli).
