@@ -5,21 +5,21 @@
 class Cronplan < Formula
   desc "cronplan is a tool to show next triggers for AWS cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.0.0/cronplan_1.0.0_darwin_amd64.tar.gz"
-      sha256 "1b2387b7303ba56e9b7adf9734aaf210545b7fa595eb34cd3abb482a96a44ab9"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_darwin_amd64.tar.gz"
+      sha256 "806f121493b0ae2365f5c8046e1b975e4dd04b683170808d65a296e9823ce892"
 
       def install
         bin.install 'cronplan'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.0.0/cronplan_1.0.0_darwin_arm64.tar.gz"
-      sha256 "aa8c1542cfb35ead014ace63122cfad84da7aec8ee106d8308feaad6afdf7a0c"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_darwin_arm64.tar.gz"
+      sha256 "4abd183ae724a502bf21d4e8123a2d64e904c63e28e14b00ab0cf3c3a8053629"
 
       def install
         bin.install 'cronplan'
@@ -28,17 +28,17 @@ class Cronplan < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.0.0/cronplan_1.0.0_linux_amd64.tar.gz"
-      sha256 "bdecdf5bb1a15b70fd7d9314f44d5b35cb513fc79d4587760a5f954e0ae84d10"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_linux_arm64.tar.gz"
+      sha256 "6877ffd8951c42c46acb03079c1cecdf4b3cdc3d50b366220382e2a23d1db81d"
 
       def install
         bin.install 'cronplan'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.0.0/cronplan_1.0.0_linux_arm64.tar.gz"
-      sha256 "38810af8c2597cf2988104c89d50b9868cd015cf55d8d019fa9db7612e9f071b"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_linux_amd64.tar.gz"
+      sha256 "f0e04ab693ae55df8e056401b381bedd64f653129158eced859dc08d5be5b37f"
 
       def install
         bin.install 'cronplan'
