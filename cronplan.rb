@@ -5,21 +5,21 @@
 class Cronplan < Formula
   desc "cronplan is a tool to show next triggers for AWS cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_darwin_amd64.tar.gz"
-      sha256 "806f121493b0ae2365f5c8046e1b975e4dd04b683170808d65a296e9823ce892"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.2.0/cronplan_1.2.0_darwin_amd64.tar.gz"
+      sha256 "9614d50f8b603acc6ab47c442363a2f840f1f4b6c8875ac0e230779e486651bd"
 
       def install
         bin.install 'cronplan'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_darwin_arm64.tar.gz"
-      sha256 "4abd183ae724a502bf21d4e8123a2d64e904c63e28e14b00ab0cf3c3a8053629"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.2.0/cronplan_1.2.0_darwin_arm64.tar.gz"
+      sha256 "f0dae88f89c20012b603405ce478e5cbbf2922540eb9a89d1cbbeb383dd6667c"
 
       def install
         bin.install 'cronplan'
@@ -29,16 +29,16 @@ class Cronplan < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_linux_arm64.tar.gz"
-      sha256 "6877ffd8951c42c46acb03079c1cecdf4b3cdc3d50b366220382e2a23d1db81d"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.2.0/cronplan_1.2.0_linux_arm64.tar.gz"
+      sha256 "b939a556b954196b046e5d8bdf94b37d08c8ff79e42bd33ac806e1b874552b08"
 
       def install
         bin.install 'cronplan'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.1.0/cronplan_1.1.0_linux_amd64.tar.gz"
-      sha256 "f0e04ab693ae55df8e056401b381bedd64f653129158eced859dc08d5be5b37f"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.2.0/cronplan_1.2.0_linux_amd64.tar.gz"
+      sha256 "9c2474ea802fbedaa3aac18f3a4df26bb5447d015320bbeaad933e9fcb007f6c"
 
       def install
         bin.install 'cronplan'
