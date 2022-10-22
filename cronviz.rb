@@ -5,21 +5,21 @@
 class Cronviz < Formula
   desc "cronviz is a tool to visualize cron schedule."
   homepage "https://github.com/winebarrel/cronplan"
-  version "1.5.3"
+  version "1.5.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.3/cronviz_1.5.3_darwin_amd64.tar.gz"
-      sha256 "353bd0648b5aa14878b1f23287108b8154fde2f508ff7d9f996e553603b4e505"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.4/cronviz_1.5.4_darwin_amd64.tar.gz"
+      sha256 "2ad7f80b30e6fde36bdc4e2ceb13116fdc59dc0a548ec473a5585abb83725f03"
 
       def install
         bin.install 'cronviz'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.3/cronviz_1.5.3_darwin_arm64.tar.gz"
-      sha256 "733a4ec274665aca7e7c5a6e5306aaf4523db0294ef9ee8b4bee8d7ebea974f2"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.4/cronviz_1.5.4_darwin_arm64.tar.gz"
+      sha256 "93f1ce1fdff4a19e973f4a9cd7c51528634dc8de1f8aecda0b082235ae36b842"
 
       def install
         bin.install 'cronviz'
@@ -29,16 +29,16 @@ class Cronviz < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.3/cronviz_1.5.3_linux_arm64.tar.gz"
-      sha256 "ec280056fffd06150a0b8fca2330f77d68ea2b75fbd5be0c025c3f46576a5005"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.4/cronviz_1.5.4_linux_arm64.tar.gz"
+      sha256 "bab3b8fd8ac31d8488bfc6f9560a2365a91f79614fb762efa63910669230dec9"
 
       def install
         bin.install 'cronviz'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.3/cronviz_1.5.3_linux_amd64.tar.gz"
-      sha256 "e35c2e1c3f421d9ef2aedf25d41c4bf40d333473d91f3076a174b498ee3c6af8"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.5.4/cronviz_1.5.4_linux_amd64.tar.gz"
+      sha256 "d93e8d21d1f6f2478bc2275b71297279f315ab4ad62335c3e4bdf784ec239c02"
 
       def install
         bin.install 'cronviz'
