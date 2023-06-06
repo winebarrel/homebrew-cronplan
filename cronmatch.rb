@@ -9,17 +9,17 @@ class Cronmatch < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_darwin_arm64.tar.gz"
-      sha256 "0c3be6cd402390a68aefa665d23b476fd9efa71195e931523df1b9602c4c4e04"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_darwin_amd64.tar.gz"
+      sha256 "80458e679456ec23695fce62e8777114af00480444f183052efc12cee30bba0d"
 
       def install
         bin.install 'cronmatch'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_darwin_amd64.tar.gz"
-      sha256 "98e14aa64bf988d11ce76b35912eb7d158e02fa9e5fb8609bf034c7ee17fbc6b"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_darwin_arm64.tar.gz"
+      sha256 "636a9ba682bc152aed12d8107e07932d71bf6f797d6bb865ec85aacd6c9507a3"
 
       def install
         bin.install 'cronmatch'
@@ -28,17 +28,17 @@ class Cronmatch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_linux_amd64.tar.gz"
-      sha256 "d31f669fcc3786ca5a49cab4df2a36a47897546383b5b7659941e1b61bd23be8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_linux_arm64.tar.gz"
+      sha256 "edaced08a7f4778736b5cb28a4729969a86a527573d7296579e8e6d4af92fde1"
 
       def install
         bin.install 'cronmatch'
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_linux_arm64.tar.gz"
-      sha256 "ad93df0dd1f57119fd7d2307bb279f8b78a4df3d30ba47a996e4379e3172e77b"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronmatch_1.7.1_linux_amd64.tar.gz"
+      sha256 "7c589a759ef3fcd2afb909f2f0aa154912f6f6e4048d119db16b9e20520fb0f2"
 
       def install
         bin.install 'cronmatch'
