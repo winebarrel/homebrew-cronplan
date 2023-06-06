@@ -11,7 +11,7 @@ class Cronviz < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronviz_1.7.1_darwin_amd64.tar.gz"
-      sha256 "450e45eb1c9caf24f887833b899b8f5ff506ab33df18a448eded28f0bb6bb7fb"
+      sha256 "6df107e65fa63d417c3fbbf2e2b9baf0e0c3a856eda834d7c346a0d423cf14ef"
 
       def install
         bin.install 'cronviz'
@@ -19,7 +19,7 @@ class Cronviz < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronviz_1.7.1_darwin_arm64.tar.gz"
-      sha256 "d0c99ae9a02ff2a3d3c671b3cdffafd4be0cd69b6537ca21bdab2d385fe5490e"
+      sha256 "9e454e1fe15bf0851a76e1255294242fe59052dc2286a0fc7dbcd799180eced1"
 
       def install
         bin.install 'cronviz'
@@ -28,17 +28,17 @@ class Cronviz < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronviz_1.7.1_linux_arm64.tar.gz"
-      sha256 "055869284d72bdd08360c5f0d745c27ae5e8d718db155215c6a315367ca53614"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronviz_1.7.1_linux_amd64.tar.gz"
+      sha256 "f60310da410ee90a4d828b4bf6ebbb9756791b0f60dab578e57d187ad2e073f0"
 
       def install
         bin.install 'cronviz'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronviz_1.7.1_linux_amd64.tar.gz"
-      sha256 "5a38791334a47d446b26221bbb47635f9207ad6244471860c5f6ab9c0fc0dec4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.7.1/cronviz_1.7.1_linux_arm64.tar.gz"
+      sha256 "0a2a6d7480b1d54a36cabbd21cd894d10c71fdfd2d244500941facac96086e7c"
 
       def install
         bin.install 'cronviz'
