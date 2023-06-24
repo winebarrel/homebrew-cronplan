@@ -11,7 +11,7 @@ class Cronplan < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronplan_1.8.1_darwin_arm64.tar.gz"
-      sha256 "4592e4226cafdc975a0d46e6fb3a304b37bc2eee83876b03d0312d9a9a6209ec"
+      sha256 "d3fc8e1fe2c90991d1c0c1e8d866c26bc564195b09e1ae3769c2cdaecd18cec1"
 
       def install
         bin.install 'cronplan'
@@ -19,7 +19,7 @@ class Cronplan < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronplan_1.8.1_darwin_amd64.tar.gz"
-      sha256 "6e7805d8a76d43355a64ffe86551278159e5e02709e55deed064f881104a5b3e"
+      sha256 "e92f9cf0f8c0392e3f1d8b28211255d05f2d54981b8c3b4edc9441413a7c0a9f"
 
       def install
         bin.install 'cronplan'
@@ -30,7 +30,7 @@ class Cronplan < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronplan_1.8.1_linux_amd64.tar.gz"
-      sha256 "84a77dd673822eab717c3bd8db68e5403ef47dfbc1912ce0639f59e3aff9df35"
+      sha256 "89c7bc88987841df6c5a43e0e5c99c786fac37726e5d80aafc2ecc9189cfa49c"
 
       def install
         bin.install 'cronplan'
@@ -38,7 +38,7 @@ class Cronplan < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronplan_1.8.1_linux_arm64.tar.gz"
-      sha256 "e8f6eb4e80d0408b6d57e1a652c8018506e51a1dba1ba882cd112fbb8449c2e2"
+      sha256 "82aa01a9d10714e83646f2e80eeb7295d933f57c68e5370465428630356d474c"
 
       def install
         bin.install 'cronplan'
