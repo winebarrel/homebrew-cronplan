@@ -11,7 +11,7 @@ class Cronmatch < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronmatch_1.8.1_darwin_arm64.tar.gz"
-      sha256 "7cb8730b74b6ef538ef61338deb5e6384cd2cdd6ada5172aec0ae2b0f64a62a5"
+      sha256 "b1faa6bdfac0e98e30de2ae7da0adaa740b243b9fc7ca7c18b922b907e9fb5bc"
 
       def install
         bin.install 'cronmatch'
@@ -19,7 +19,7 @@ class Cronmatch < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronmatch_1.8.1_darwin_amd64.tar.gz"
-      sha256 "c6a5f9d13649a42cb0f7602ac5f23565174f5a0558b050f598cd4c813948bc12"
+      sha256 "179c33ad239d36b12e9ae6a4ea6a896e9ad3ea2bd2de8579e896fdff57b8b67c"
 
       def install
         bin.install 'cronmatch'
@@ -28,17 +28,17 @@ class Cronmatch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronmatch_1.8.1_linux_arm64.tar.gz"
-      sha256 "f6403ffa537defb749910f887c4536dc722cc14d5ce22102b4604c7916dd28f9"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronmatch_1.8.1_linux_amd64.tar.gz"
+      sha256 "ec039131502c8b5de663d0917e33567d0920dc22fae33d747990f9db1b5b469a"
 
       def install
         bin.install 'cronmatch'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronmatch_1.8.1_linux_amd64.tar.gz"
-      sha256 "8762c9dca073b00f11d4db891f01b938188ff94ceb18de8517ae8ca3e156cbe4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.8.1/cronmatch_1.8.1_linux_arm64.tar.gz"
+      sha256 "09b3979579e6121e7c643c7344d9d43129fd96c9e4b0e46e6a82f56cd5eaa4ef"
 
       def install
         bin.install 'cronmatch'
