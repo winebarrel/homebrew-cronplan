@@ -5,21 +5,21 @@
 class Cronskd < Formula
   desc "cronskd is a tool to show a schedule of cron expressions."
   homepage "https://github.com/winebarrel/cronplan"
-  version "1.10.3"
+  version "1.10.4"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronskd_1.10.3_darwin_amd64.tar.gz"
-      sha256 "66dc47f0e2684d4e9d500b68a1b206cc3ba688d231d966f76df11a52d5905b9f"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronskd_1.10.4_darwin_amd64.tar.gz"
+      sha256 "2e49e1a3adaea8dfe731badb1ef78916c2af6f76d88e74a6bf95679daab9d873"
 
       def install
         bin.install 'cronskd'
       end
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronskd_1.10.3_darwin_arm64.tar.gz"
-      sha256 "802f4e1da41ea7eb6e876c2b17e1029ce5878657509ad806e656d3400b86767e"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronskd_1.10.4_darwin_arm64.tar.gz"
+      sha256 "62df02e93046f162dcbb572c461294ba8f0809c627455a82f600ca3e613b0728"
 
       def install
         bin.install 'cronskd'
@@ -30,8 +30,8 @@ class Cronskd < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronskd_1.10.3_linux_amd64.tar.gz"
-        sha256 "e4322cfe9c23e0a7942ff66d27093acf91eb7c709170ca127664c87c896c4985"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronskd_1.10.4_linux_amd64.tar.gz"
+        sha256 "f904b0b38ed0d206e46a4cac8f27ed74948d02e2ba1f26ec8e1b82ee4432e55d"
 
         def install
           bin.install 'cronskd'
@@ -40,8 +40,8 @@ class Cronskd < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronskd_1.10.3_linux_arm64.tar.gz"
-        sha256 "793aa9c67afe162233d4b72c1036b36d2e97bc42ac180b85d85197ec8d89e71f"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronskd_1.10.4_linux_arm64.tar.gz"
+        sha256 "026733a1784ad340e343dd2d07ca42fc518084e6616bd6a19ab43117c8aabea7"
 
         def install
           bin.install 'cronskd'
