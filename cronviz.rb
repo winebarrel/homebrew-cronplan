@@ -5,21 +5,21 @@
 class Cronviz < Formula
   desc "cronviz is a tool to visualize cron schedule."
   homepage "https://github.com/winebarrel/cronplan"
-  version "1.10.3"
+  version "1.10.4"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronviz_1.10.3_darwin_amd64.tar.gz"
-      sha256 "d8779ed27405f365b313bdcc816212482d4a19be1fcff25e446d85ff9693e6cc"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronviz_1.10.4_darwin_amd64.tar.gz"
+      sha256 "0ccd3f54d62650f272e260ed6f97f4663a0dd3b2f53be2ee0c84c3ae2b70e720"
 
       def install
         bin.install 'cronviz'
       end
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronviz_1.10.3_darwin_arm64.tar.gz"
-      sha256 "4bafa8e64c7031c3938a81a0153b5a6ed5647ea95869204efda7b39a56874c19"
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronviz_1.10.4_darwin_arm64.tar.gz"
+      sha256 "52634f9e8fac728809d468f30e00762eb07b6afad5905eab24c17a6bda9d9294"
 
       def install
         bin.install 'cronviz'
@@ -30,8 +30,8 @@ class Cronviz < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronviz_1.10.3_linux_amd64.tar.gz"
-        sha256 "88e2cc664dd1f45c9e0276e71c228d17d854c53f684542651f088f2ffdcc1e37"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronviz_1.10.4_linux_amd64.tar.gz"
+        sha256 "7325941424f9a6a760d3d9f51f1ef0b85e8b6b6d66717d17f0b73ed6e4093bd6"
 
         def install
           bin.install 'cronviz'
@@ -40,8 +40,8 @@ class Cronviz < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.3/cronviz_1.10.3_linux_arm64.tar.gz"
-        sha256 "1ad0f36576bf596f6272947d715277f43668a444c57ba54e9605ce6c39e4e22c"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronviz_1.10.4_linux_arm64.tar.gz"
+        sha256 "bb5c4b427270d54fb8ca08e8cfbd289265053187f1927063fe39e654f35a6a04"
 
         def install
           bin.install 'cronviz'
