@@ -5,21 +5,21 @@
 class Crongrep < Formula
   desc "crongrep is a tool to grep with cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "1.10.4"
+  version "1.10.5"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/crongrep_1.10.4_darwin_amd64.tar.gz"
-      sha256 "d1429c8af59c2503ba488b39171b5e352c41955332306813d5811d99d3279253"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/crongrep_1.10.5_darwin_amd64.tar.gz"
+      sha256 "58abb19974e12587cf7e6953b963eb48a466ad9db3a7e640e435e1a4fd5aceba"
 
       def install
         bin.install 'crongrep'
       end
     end
-    on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/crongrep_1.10.4_darwin_arm64.tar.gz"
-      sha256 "16bba0b2373487cdd7d63fa530676382b0299441aa26b9d49ee59a6d542f8388"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/crongrep_1.10.5_darwin_arm64.tar.gz"
+      sha256 "6d480308bdc623d88c38f34b7537a0e9d7d24eacd9a78aa37f7f01dc1d53289a"
 
       def install
         bin.install 'crongrep'
@@ -28,20 +28,20 @@ class Crongrep < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/crongrep_1.10.4_linux_amd64.tar.gz"
-        sha256 "047234505b1de8b38dd1d60c5e7cb3d1dd4d9183b7a74d70ed11865c0d507c9e"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/crongrep_1.10.5_linux_amd64.tar.gz"
+        sha256 "920c17cfb3bc11fbc844b7cabdc1caa83fe857f36c1d023cbde36ad95bf55e8b"
 
         def install
           bin.install 'crongrep'
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/crongrep_1.10.4_linux_arm64.tar.gz"
-        sha256 "fdc83a44726572a2aaed072bd966bbb4faf1ab24f62dbcef0ddb241921ee743e"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/crongrep_1.10.5_linux_arm64.tar.gz"
+        sha256 "d97bc24962004959e879924f7700a3e679cd212c81096e6910ee31e03fbe4902"
 
         def install
           bin.install 'crongrep'
