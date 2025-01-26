@@ -5,21 +5,21 @@
 class Cronmatch < Formula
   desc "cronmatch is a tool to check if datetime matches AWS cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "1.10.4"
+  version "1.10.5"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronmatch_1.10.4_darwin_amd64.tar.gz"
-      sha256 "d69de666ae25555d9e8e5611158eb5feab4a6dd27a1296aaf99ee1cf4cdbb46d"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/cronmatch_1.10.5_darwin_amd64.tar.gz"
+      sha256 "0a80d72eeeb973d0f374d025f647d62e79199b2293e2bc736523f42568070170"
 
       def install
         bin.install 'cronmatch'
       end
     end
-    on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronmatch_1.10.4_darwin_arm64.tar.gz"
-      sha256 "8214c6834a919499a17d2fc28bd797c7426bf40dc90d0293b8ea31cc3e0cb97b"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/cronmatch_1.10.5_darwin_arm64.tar.gz"
+      sha256 "aea8a9250fcf3432b7ae8c15b5e663421708959dcf995af4752740ba5b124e62"
 
       def install
         bin.install 'cronmatch'
@@ -28,20 +28,20 @@ class Cronmatch < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronmatch_1.10.4_linux_amd64.tar.gz"
-        sha256 "2147389478576038d9bfa42f3e03c3bd20636a32812b947aa52aa8fd36123d8d"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/cronmatch_1.10.5_linux_amd64.tar.gz"
+        sha256 "f022108cdf52b3b5d3d07ac40fdaa72ceac92958900925a3d1c5f461f11b4650"
 
         def install
           bin.install 'cronmatch'
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.4/cronmatch_1.10.4_linux_arm64.tar.gz"
-        sha256 "897659eaa08b4e8f4aecef9d3521469fa60f380e402463da38e909b68643b9ec"
+        url "https://github.com/winebarrel/cronplan/releases/download/v1.10.5/cronmatch_1.10.5_linux_arm64.tar.gz"
+        sha256 "26297985709513af5f9fef39864441f6fa892fe6e31d71cae8714fcced618502"
 
         def install
           bin.install 'cronmatch'
