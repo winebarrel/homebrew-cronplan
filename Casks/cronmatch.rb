@@ -2,7 +2,7 @@
 cask "cronmatch" do
   desc "cronmatch is a tool to check if datetime matches AWS cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.0.1"
+  version "2.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "cronmatch" do
 
   on_macos do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronmatch_2.0.1_darwin_amd64.tar.gz"
-      sha256 "b13a52c76865010d3714cb34584a1cedd7b42d0fa40624385cb88780e868e6d2"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronmatch_2.0.2_darwin_amd64.tar.gz"
+      sha256 "a25e9f6d717389a3649b4c4dff9d33eea3f5e4c0819f9eb73a4eec6d03b25b2a"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronmatch_2.0.1_darwin_arm64.tar.gz"
-      sha256 "49f81eaee05a15bfd9ef09fc0b2e333002e7bf7f83e42187a47f8cc3a26a0cab"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronmatch_2.0.2_darwin_arm64.tar.gz"
+      sha256 "9ab2d06771fd8539dd450f3c6970a441fda6cd3cc41c7c05374e43363155e10f"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronmatch_2.0.1_linux_amd64.tar.gz"
-      sha256 "f565016ebf21967ad211452acf26d4b984504377c2dad1d079f29a9e7fc3dc89"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronmatch_2.0.2_linux_amd64.tar.gz"
+      sha256 "40382194400e8b326351684a64e1a406f4a42ae9ebc7c983edb6c36d0e77518a"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronmatch_2.0.1_linux_arm64.tar.gz"
-      sha256 "141390d8d5b408c713d9793278bd2486d8559a1f7b89e2d44e247bf49326e9c7"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronmatch_2.0.2_linux_arm64.tar.gz"
+      sha256 "c7793f5522365a429c9769eeeb0c32050708703487a0e0ef99a32d773e36f20b"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cronmatch"]
     end
   end
 
