@@ -2,7 +2,7 @@
 cask "crongrep" do
   desc "crongrep is a tool to grep with cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.0.1"
+  version "2.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "crongrep" do
 
   on_macos do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/crongrep_2.0.1_darwin_amd64.tar.gz"
-      sha256 "ceace7b1857040bdc4db100baf718cd6a095c00184196415081fc1279d52bb18"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/crongrep_2.0.2_darwin_amd64.tar.gz"
+      sha256 "2ae377b1d0e67ea4db426f9edb5fbce778512132a003b7d587a9072ca085f510"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/crongrep_2.0.1_darwin_arm64.tar.gz"
-      sha256 "f66418004041dd5aede348b9708b08e29d23b46e7e4fe371c74759d9b2e04415"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/crongrep_2.0.2_darwin_arm64.tar.gz"
+      sha256 "227a6d69623a3fc3a1a05b1d18af0a8d88f762b6476c1afef47f078313a4c573"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/crongrep_2.0.1_linux_amd64.tar.gz"
-      sha256 "0737d4ed55c3fe08a3d56e510f8408946a48ae82825fb904012ef44332818940"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/crongrep_2.0.2_linux_amd64.tar.gz"
+      sha256 "3177949f4436943d3593e60b375e34b79f97d54d21a5cd096d8650c240bb942c"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/crongrep_2.0.1_linux_arm64.tar.gz"
-      sha256 "0f592e5ebebcd6f808763456103983b3da4f3f6244adfe18fce88bd36b56b1cc"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/crongrep_2.0.2_linux_arm64.tar.gz"
+      sha256 "3466c3f06a2b9076037139aa2c42186e9624d7b85af2a82f68c74bcb2aaea401"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/crongrep"]
     end
   end
 
