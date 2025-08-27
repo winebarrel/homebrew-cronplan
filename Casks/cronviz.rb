@@ -2,7 +2,7 @@
 cask "cronviz" do
   desc "cronviz is a tool to visualize cron schedule."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.0.1"
+  version "2.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "cronviz" do
 
   on_macos do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronviz_2.0.1_darwin_amd64.tar.gz"
-      sha256 "f6a517c06a2c0623b16dcae98c017a568c7f9dc6f5894a18348e15bcb5cf59f4"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronviz_2.0.2_darwin_amd64.tar.gz"
+      sha256 "b5b172136a13448da62c27667b727d130dfeb9ef313a6d3997c532f7cddcc131"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronviz_2.0.1_darwin_arm64.tar.gz"
-      sha256 "524f4bc08dc498f9d07a9bed80f7e471022f01df4d8d89578f99f379ef77e8c5"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronviz_2.0.2_darwin_arm64.tar.gz"
+      sha256 "23c593387d278f01127490e23d5bbb4efaa2c3694d0b4638d20f856c61e5f5df"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronviz_2.0.1_linux_amd64.tar.gz"
-      sha256 "f69fb7253175ee6b64aeef5f271310f3f00505badc7d7f2f0027335cc0d8cc1a"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronviz_2.0.2_linux_amd64.tar.gz"
+      sha256 "bbf389973abc3bc9c67112117bae7b17371c05553ed140b8db2bed3cff39960e"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronviz_2.0.1_linux_arm64.tar.gz"
-      sha256 "9d1a471a0d38094ca19fc01d7f8b93098c079612d4ba112390677666db296c09"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronviz_2.0.2_linux_arm64.tar.gz"
+      sha256 "ed1110a182a189f6559c3029bc5462d34fb56a5e60b6b0958d1a25339c869023"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cronviz"]
     end
   end
 
