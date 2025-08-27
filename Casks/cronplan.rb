@@ -2,7 +2,7 @@
 cask "cronplan" do
   desc "cronplan is a tool to show next triggers for AWS cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.0.1"
+  version "2.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "cronplan" do
 
   on_macos do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronplan_2.0.1_darwin_amd64.tar.gz"
-      sha256 "23e200e1c222c2a7627f21673d435052a4777d803de5a121e82cf0debbfcfd44"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronplan_2.0.2_darwin_amd64.tar.gz"
+      sha256 "5fbdd20475a711c1a8a40fdc538c6471a36f82cb89a637059707d75c4deb7460"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronplan_2.0.1_darwin_arm64.tar.gz"
-      sha256 "112db4d266779085f38b10d73ebf7aa0771655a85cdcad6241a08b018a8cff0d"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronplan_2.0.2_darwin_arm64.tar.gz"
+      sha256 "2e96258b5b98ee5e6c71dc3340f650f435f80f7afc1a67825c2157f23831c30e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronplan_2.0.1_linux_amd64.tar.gz"
-      sha256 "4065b3eb897b8b22b948fba8894a1f580c2ae83423813253fe5b8fce86ade30b"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronplan_2.0.2_linux_amd64.tar.gz"
+      sha256 "f6e5dcbad5d55bd393762d8e560d4ddb476ca61b0a77eef51b35300f909e0cbc"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronplan_2.0.1_linux_arm64.tar.gz"
-      sha256 "b56d769f3f1fb8d03b14e51180b841c15372b55960ff5de690f74d74f59ec41d"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronplan_2.0.2_linux_arm64.tar.gz"
+      sha256 "f2413a956be37b2cdea97d8d304d60c8b83a6a0672147ca60d03cd3a8c6f0bec"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cronplan"]
     end
   end
 
