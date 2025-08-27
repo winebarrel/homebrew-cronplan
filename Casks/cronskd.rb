@@ -2,7 +2,7 @@
 cask "cronskd" do
   desc "cronskd is a tool to show a schedule of cron expressions."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.0.1"
+  version "2.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "cronskd" do
 
   on_macos do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronskd_2.0.1_darwin_amd64.tar.gz"
-      sha256 "095a75ef060f3ba31535b6cdd323e1f97d6a705da5f84de12c83192f59144cda"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronskd_2.0.2_darwin_amd64.tar.gz"
+      sha256 "4b3fc3600a0c7d8f2e51b5d32285c92d370a9df2a9b5028cc0791271a63057b1"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronskd_2.0.1_darwin_arm64.tar.gz"
-      sha256 "3a72ac29e2ed01abef5fde2f95610499e593e293e914a98a35f561e0d2336bf6"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronskd_2.0.2_darwin_arm64.tar.gz"
+      sha256 "469a793023381fc6e9f4fe975a046ffc631fc7d8212ca923fa9cb0bebdb61fe2"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronskd_2.0.1_linux_amd64.tar.gz"
-      sha256 "28b6e1b22bc333bfd6f629eec9bcb1a194c27ceb40484655a2cb825ad62180a2"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronskd_2.0.2_linux_amd64.tar.gz"
+      sha256 "94a120283ddcc50c8dfa2386218d4927cfdeefb8c5be0459f4f40ccac67e5308"
     end
     on_arm do
-      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.1/cronskd_2.0.1_linux_arm64.tar.gz"
-      sha256 "ef3150accfcc8ac07293b255f123e0ab5edaf93441f761ca7ce97c2c15892cc1"
+      url "https://github.com/winebarrel/cronplan/releases/download/v2.0.2/cronskd_2.0.2_linux_arm64.tar.gz"
+      sha256 "39ea9304b0e5fa934218b5f68feb312bb0124ca1509fd60c8c9c7466e9297466"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cronskd"]
     end
   end
 
