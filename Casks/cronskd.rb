@@ -3,7 +3,7 @@ cask "cronskd" do
   name "cronskd"
   desc "cronskd is a tool to show a schedule of cron expressions."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.1.1"
+  version "2.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cronskd" do
   on_macos do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronskd_#{version}_darwin_amd64.tar.gz"
-      sha256 "81dee7a393a9a87220c51beb5e8e0d0404587f1bfb7148e1235918727afc794f"
+      sha256 "6d65324d7e69e1e48f8a7b08b359839de17ded627441a1161294c74ba62b6895"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronskd_#{version}_darwin_arm64.tar.gz"
-      sha256 "7ebe83d9a644a8c6cc5b32718f4fb7351e16e1f4e580706a0c30298e97e9d20c"
+      sha256 "55fe8beef7e5bc67045592c952e3e95d9d9080be0e14c3a274fb2ce71e7c55ca"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronskd_#{version}_linux_amd64.tar.gz"
-      sha256 "94e8980e7e80b95ea653849f8051ba8e1d04287e24b7d63b9efa1364104cedc1"
+      sha256 "a791f1f1723125c542c58d61eb35d3dfa0c89dd59a5ff49d3b2283342b82f3c4"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronskd_#{version}_linux_arm64.tar.gz"
-      sha256 "0bce198fba198b0b03fbed7658e446f4705657724a61f5b10613a26d35c59a92"
+      sha256 "59f06591f6d76badf2d7543902074b5b6b90d05b7df39cc206b3cf806579cb49"
     end
   end
 
