@@ -3,7 +3,7 @@ cask "cronplan" do
   name "cronplan"
   desc "cronplan is a tool to show next triggers for AWS cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.1.0"
+  version "2.1.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cronplan" do
   on_macos do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronplan_#{version}_darwin_amd64.tar.gz"
-      sha256 "d177e7d53ee96c75e7c19248bedd64131ce1524c1b6886f8ae4cac61e098f0a0"
+      sha256 "8e5991a5f7ffe1b5618a15f33ad073cc8f1e8e482a317dddf81414dd4a8ed6e2"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronplan_#{version}_darwin_arm64.tar.gz"
-      sha256 "f26f27d970f457a91eccf5e72786b9f692025f8be7837c3854fbfab82edbca10"
+      sha256 "35143a2f1c13ee40570cd7ef82f9fe248dbc91bb3b610b69102dd00e88270060"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronplan_#{version}_linux_amd64.tar.gz"
-      sha256 "08b35d3228d5a62d840480dd78a977159908ac472d1ac15ef1f5d2e365a42e5b"
+      sha256 "acfae3f4fc26574424ba735c5bae2985bcb895fe3102e5222b1c6bc9344a7ccf"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronplan_#{version}_linux_arm64.tar.gz"
-      sha256 "c40a2db561a4da4b0d43bc602381f59d97f836dfc2dec14b1c32afde01faaaa3"
+      sha256 "d34bc99a40552b480f52ef8626ec3e157807c33a5b1d80d653541ea052323674"
     end
   end
 
