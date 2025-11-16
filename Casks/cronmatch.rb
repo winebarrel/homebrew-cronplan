@@ -3,7 +3,7 @@ cask "cronmatch" do
   name "cronmatch"
   desc "cronmatch is a tool to check if datetime matches AWS cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.1.1"
+  version "2.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cronmatch" do
   on_macos do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronmatch_#{version}_darwin_amd64.tar.gz"
-      sha256 "b6cadc93263924f51c3dbb6fe75d4affc4f818273656907a9d66d49f63f0e069"
+      sha256 "014b6b5e69c540df238f30243b1ab498e5d6e4ee398ef18165ffb55d2a76bad7"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronmatch_#{version}_darwin_arm64.tar.gz"
-      sha256 "06e6dba3bd24c2fb6b65ff546db17e5045866ce0c7f815eb3ca8e50a443a9a76"
+      sha256 "182b8f6a73f5525ed5acf9e6ce9e5e23c02273a106419bb0ca2fb4d69a704636"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronmatch_#{version}_linux_amd64.tar.gz"
-      sha256 "dbc134fa32de922d1efc57fffaec948d0695844101e39fe64b177dc04edfebb6"
+      sha256 "47beac8dbc5353989525dc006d92c4bedf7e75cb88f3822c6d6873396de0f370"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronmatch_#{version}_linux_arm64.tar.gz"
-      sha256 "2a83457fc0f0eeaa570f602332229b5077e124cd9a102f38407865d1eb434902"
+      sha256 "7619114b83e3765bd27509cd9f8b44c27b6d78427da89e94263afb802fe62fc7"
     end
   end
 
