@@ -3,7 +3,7 @@ cask "cronviz" do
   name "cronviz"
   desc "cronviz is a tool to visualize cron schedule."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.1.1"
+  version "2.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "cronviz" do
   on_macos do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronviz_#{version}_darwin_amd64.tar.gz"
-      sha256 "bf5957d3218c390562589210ddfb38c64fe0dc06e3d7c9a4321a04abe80e0df1"
+      sha256 "6593c5846ccbf597dc8eb2aec2b3eceee6bf6313ee8fe49d6ea02325c2a06f14"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronviz_#{version}_darwin_arm64.tar.gz"
-      sha256 "ec6abb29e36af4929d851150c09b7b1a6bc9e1b1459a51b3954ff19a502e1184"
+      sha256 "13f8fa5793ce753f36376ca738ebeb606751e636336f6a58b938b9d87f881949"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronviz_#{version}_linux_amd64.tar.gz"
-      sha256 "537bdd39934135c384ef34e26457bf5b78d3b70cde27c732b718d54e706cada7"
+      sha256 "a2469d78184075082254e636dfac32ef3122d3844491f71d876f963944aaf40c"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/cronviz_#{version}_linux_arm64.tar.gz"
-      sha256 "3b0437b7caed1d99df834b17651c2edf1a9d44efd3668d6a7a9b1d30deb850a5"
+      sha256 "d4d3de16da5ad7d08025ff86ef43e048007fd1cc1a5c7173c89bb71821084efa"
     end
   end
 
