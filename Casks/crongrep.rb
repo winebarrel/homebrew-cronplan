@@ -3,7 +3,7 @@ cask "crongrep" do
   name "crongrep"
   desc "crongrep is a tool to grep with cron expression."
   homepage "https://github.com/winebarrel/cronplan"
-  version "2.1.1"
+  version "2.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "crongrep" do
   on_macos do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/crongrep_#{version}_darwin_amd64.tar.gz"
-      sha256 "93d893ffa408666ced41831b0775cffc3495a99528a3eee14ed1bd6772d78ffe"
+      sha256 "0989e8ede48ce4a6658ebdbd8bc28c85c66e81f41cb001fae9a3173f1525639e"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/crongrep_#{version}_darwin_arm64.tar.gz"
-      sha256 "fccd0ee2622315a5743dd3b44fe160a44c7893855e2ed495340daa34668f687f"
+      sha256 "223cb0f397fa17d2cefd2e2ec2944638e97b01c4d36e2109caa727df2a043475"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/crongrep_#{version}_linux_amd64.tar.gz"
-      sha256 "d5c9da1f39f7d979a3287c6eb9b70ad185828bec67add856a77c15c50865644d"
+      sha256 "3713c85342a565ee155824bdb1cf38f79646829f550b457686c90ade31e477ba"
     end
     on_arm do
       url "https://github.com/winebarrel/cronplan/releases/download/v#{version}/crongrep_#{version}_linux_arm64.tar.gz"
-      sha256 "44b2138a63fa3d008aa171ad8edfd3b8177de0cdcdb80fc5540bab38b17d3fff"
+      sha256 "55d62c7766b7a0c1fc547a8fb03679e9835027fe10593e05fff34ddda95f9308"
     end
   end
 
